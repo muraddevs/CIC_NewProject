@@ -20,6 +20,11 @@ public class ProductController {
     public List<Product> getAllProducts() {
         return productService.findAll();
     }
+    @GetMapping("/getbyname")
+    public  List<Product> getProductsByName(String name) {
+        return productService.findByName(name);
+    }
+
 
     @GetMapping("/{id}")
     public ResponseEntity<Product> getProductById(@PathVariable Long id) {

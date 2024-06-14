@@ -18,9 +18,14 @@ public class ProductService {
     public List<Product> findAll() {
         return productRepository.findAll();
     }
+    public  List<Product> findByName(String name) {
+        return productRepository.findByName(name);
+    }
 
-    public Optional<Product> findById(Long id) {
-        return productRepository.findById(id);
+
+    public Optional<Product> findById(Long Id) {
+
+        return productRepository.findById(Id);
     }
 
     public Product save(Product product) {
